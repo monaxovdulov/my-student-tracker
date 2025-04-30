@@ -6,12 +6,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup/instal-uv.yaml
+      - uses: ./.github/actions/setup
       - run: uv lock --locked
   linting:
     runs-on: ubuntu-latest
     needs: [lock-file]
     steps:
       - uses: actions/checkout@v4
-      - uses: ./.github/actions/setup/instal-uv.yaml
+      - uses: ./.github/actions/setup
       - run: uvx ruff check .
