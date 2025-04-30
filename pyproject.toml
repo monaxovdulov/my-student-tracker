@@ -15,3 +15,8 @@ my-student-tracker = "my_student_tracker.__main__:main"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.7",
+]
