@@ -25,6 +25,13 @@ jobs:
     uvx ruff@latest check --select I --fix . \
     && uvx ruff@latest check . --fix \
     && uvx ruff@latest format .
+  type-checking:
+    runs-on: ubuntu-latest
+    needs: [lock-file]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - run: uv run mypy .
 
 
 
