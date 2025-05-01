@@ -1,0 +1,2 @@
+# This file is intentionally empty.
+# It signals to mypy that the package includes type hints.
