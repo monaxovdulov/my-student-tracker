@@ -38,7 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
-      - run: uv run pytest -v --duration=0 --cov --cov-report=xml
+      - run: uv run pytest -v --durations=0 --cov --cov-report=xml
 
 
 
