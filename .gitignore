@@ -164,3 +164,4 @@ cython_debug/
 /psql/data/
 /redis/data/
 .env.*
+.ruff_cache/
